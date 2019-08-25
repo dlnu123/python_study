@@ -47,3 +47,7 @@ def fib(max):
 print(fib(5))
 for x in fib(5):
     print(x)
+
+
+# 课后习题
+# 杨辉三角

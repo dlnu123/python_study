@@ -9,7 +9,7 @@ def is_odd(s):
 print(list(filter(is_odd, [1, 2, 4, 5, 6, 9, 10, 15])))
 
 
-# 去除空字符串
+# 去除空字符串（？？？？？？？？）
 def not_empty(s):
     return s and s.strip()
 
@@ -17,7 +17,7 @@ def not_empty(s):
 print(list(filter(not_empty, [' A ', '', 'B', None, 'C', '  '])))
 
 
-# 求素数
+# 求素数（？？？？？？？？？）
 def odd_iter():
     n = 1
     while True:
@@ -28,3 +28,6 @@ def odd_iter():
 for x in odd_iter():
     if x < 100:
         print(x)
+
+
+# 课后习题（？？？？？？）
