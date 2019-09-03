@@ -18,9 +18,10 @@ from multiprocessing import Queue
 
 
 # -----------------------------------------------------------------------------------------------------
-# fork 相当于新建一个进程，去执行后面所有的代码
-# 子进程永远返回 0
-# 父进程则返回子进程的ID
+# fork 相当于新建一个进程，去执行后面【所有的代码】
+# fork 函数只能在mac、linux、unix系统上运行，在windows系统上没有这个函数
+# 子进程永远返回【0】
+# 父进程则会返回【子进程的ID】
 # pid = os.fork()
 # print("Process %s start..." % os.getpid())
 # if pid == 0:
@@ -30,6 +31,8 @@ from multiprocessing import Queue
 
 
 # -----------------------------------------------------------------------------------------------------
+# 由于 python 是跨平台的，所以一定存在windows上实现多进程的方法
+# 这个方法就是 multiprocessing 模块中的 Process 类了
 # def func_sub(name):
 #     print("Child Process %s start...pid = %s" % (name, os.getpid()))
 #
@@ -44,6 +47,7 @@ from multiprocessing import Queue
 
 
 # -----------------------------------------------------------------------------------------------------
+# 频繁的创建、销毁进程是很消耗资源的，因此提供了进程池来操作进程
 # def long_time_task(name):
 #     print("Run task %s (%s)..." % (name, os.getpid()))
 #     start = time.time()
@@ -66,6 +70,7 @@ from multiprocessing import Queue
 
 
 # -----------------------------------------------------------------------------------------------------
+# 控制子进程的输入和输出
 # print('$ nslookup www.python.org')
 # code = subprocess.call(('nslookup', 'www.python.org'))  # 可以是list，也可以是tuple
 # print('Exit code:', code)
@@ -79,7 +84,7 @@ from multiprocessing import Queue
 
 
 # -----------------------------------------------------------------------------------------------------
-# 进程之间通信
+# 进程之间通信（Queue、Pipes）
 # def write(queue):
 #     print("Process to write: %s" % os.getpid())
 #     for x in ['A', 'B', 'C']:
