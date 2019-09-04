@@ -5,10 +5,14 @@ import random
 import queue
 import time
 from multiprocessing.managers import BaseManager
+from multiprocessing import Queue
 
 
 task_queue = queue.Queue()
 result_queue = queue.Queue()
+# 使用 multiprocessing 模块中的 Queue 也是可以的
+# task_queue = Queue()
+# result_queue = Queue()
 
 
 class QueueManager(BaseManager):

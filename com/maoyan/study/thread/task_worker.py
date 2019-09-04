@@ -1,7 +1,6 @@
 # Worker
 
 
-import queue
 from multiprocessing.managers import BaseManager
 
 
