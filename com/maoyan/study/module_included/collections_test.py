@@ -9,6 +9,8 @@
 
 from collections import namedtuple
 from collections import deque
+from collections import defaultdict
+from collections import OrderedDict
 
 
 Point = namedtuple("Point", ["x", "y"])
@@ -32,6 +34,7 @@ print(q.count("a"))
 q.extend(["o", "p", "q"])
 print(q)
 q.insert(0, "o")
+print(q.count("o"))
 print(q)
 print(q.pop())
 print(q)
@@ -39,3 +42,19 @@ print(q.popleft())
 print(q)
 
 
+d = dict({"1": "1-", "2": "2-"})
+print(d.get("12"))
+
+# 报异常
+# dd = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
+# print(dd['key2'])
+default = defaultdict(lambda: "N/A")
+default["key1"] = "key1"
+print(default["key1"])
+print(default["key2"])
+
+
+d = dict([('a', 1), ('c1212', 2), ('b', 3)])
+print(d)
+od = OrderedDict([('a', 1), ('c', 2), ('b', 3)])
+print(od)
