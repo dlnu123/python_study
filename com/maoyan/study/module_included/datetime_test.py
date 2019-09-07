@@ -44,6 +44,7 @@ print(datetime.datetime.strptime("2019-9-4 12:12:12", "%Y-%m-%d %H:%M:%S"))
 
 print("---------------------------------------------------------------------------------------")
 print(datetime.datetime.now().strftime("%A, %b %d %H:%M"))
+print(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
 
 print("---------------------------------------------------------------------------------------")

@@ -31,3 +31,7 @@ test(1)
 test(1, c=100)
 test(1, b=200, c=100)
 test(12, c=34, b=56)
+
+
+containsKey = 1 if 1 > 1 else 0
+print(containsKey)
